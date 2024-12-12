@@ -7,6 +7,7 @@ studies succeeded in identifying chimpanzees and gorillas as our closest living 
 ([Sarich and Wilson 1967](https://www.science.org/doi/10.1126/science.158.3805.1200?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed)). However, these early molecular studies using protein similarities failed to recognize a Chimp-Human, Gorilla-Human, or Gorilla-Chimp clade. With the advent of moonshot DNA sequencing projects, it was revealed that humans share greater overall sequence similarity with chimpanzees over gorillas. However, this similarity varies across the genome with some chromosomes diverging less with chimpanzees, while remaining near the expected values for gorillas ([Patterson et al. 2006](https://www.nature.com/articles/nature04789)). This project will employ publicly available  orthologous gene datasets from the National Center for Biotechnology Information (NCBI) and will utilize an updated suite of bioinformatics tools to reexamine the hominoid trichotomy. This project will build different trees based of orthologous genomic segments for great apes (homininae) with orangutans (Pongo) as an outgroup.
 
 ![Figure 1. Historical development of hominid (great ape) systematics, figure adapted from Stoneking 2017](images/Figure1.Trees.png)
+Figure 1. Historical development of hominid (great ape) systematics, figure adapted from Stoneking 2017
 
 #### Outline
 
@@ -46,6 +47,7 @@ studies succeeded in identifying chimpanzees and gorillas as our closest living 
 
 * This tool allows you to directly download gene information in large quantities, according to various parameters 
 ![Figure 2. Schematic of NCBI Datasets operation](images/Figure2.DATASETS.png)
+Figure 2. Schematic of NCBI Datasets operation
 
 * Importantly, this tool also allows you to download orthologous genes according to a specified taxonomic group
 
@@ -89,6 +91,7 @@ done``
 #### NOTE: I removed duplicate samples and any multiple species within genera (i.e. removed multiple human sequences or removed *Pongo pygmaeus* if *Pongo abelii* is present), I did not realize there is likely issues later in the pipeline due to removing samples AFTER alignment. Upon viewing the alignments from these pruned datasets, it is obvious that large portions of a sequence are not present at the beginning positions. Further iterations of the project will rectify this conceptual error by performing data wrangling BEFORE sequence alignment. 
 
 ![Figure 3. Noted error in my workflow. After pruning multiple taxa from an alignment file, I later noted that some alignments had blanks spaces up to 141 bp from the first position.](images/Figure3.errorinworkflow.png)
+Figure 3. Noted error in my workflow. After pruning multiple taxa from an alignment file, I later noted that some alignments had blanks spaces up to 141 bp from the first position.
 
 ## Section 4: RAXML NG Analysis
 
@@ -114,4 +117,5 @@ done``
 
 * CD8A codes for an antigen on immune cells. While this project is limited in scope and inference on gene ontology, further phylogenomic analysis on functional sequences may elucidate conserved genetic elements found in deep time. Population-level analyses on human genetic variation indicates that many conserved functional variants shared between archaic humans (i.e. Neandertals and Denisovans) are located in coding regions related to immune function ([Almarri et al. 2020](https://www.cell.com/cell/fulltext/S0092-8674(20)30619-X?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS009286742030619X%3Fshowall%3Dtrue)). 
 
-![Figure 4. CD8A and GMCL1 Gene Tree for Hominoidea. The majority (n = 1) of the analyzed genes in this project recovered a traditional Chimp-Human clade. One tree (CD8A) recovered a unique topology where Gorillas and Humans form a clade.](images/Figure4.GeneTrees.png)
+![Figure 4. CD8A and GMCL1 Gene Tree for Hominoidea. The majority of the analyzed genes in this project recovered a traditional Chimp-Human clade. One tree (CD8A) recovered a unique topology where Gorillas and Humans form a clade.](images/Figure4.GeneTrees.png)
+Figure 4. CD8A and GMCL1 Gene Tree for Hominoidea. The majority of the analyzed genes in this project recovered a traditional Chimp-Human clade. One tree (CD8A) recovered a unique topology where Gorillas and Humans form a clade.
